@@ -1,6 +1,6 @@
 # 2. Создать телефонный справочник с возможностью импорта и экспорта данных в нескольких форматах.
 
-def last_names():
+def data_entry():
     last_names = []
     names = []
     tels = []
@@ -28,4 +28,4 @@ def last_names():
     return pb
 
 
-print(last_names())
+print(data_entry())
