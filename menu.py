@@ -1,5 +1,6 @@
 from look import look
 from print import print_csv, print_txt, print_all
+from os import system
 
 
 def input_contact_menu_choice():
@@ -39,13 +40,12 @@ def input_contact_menu_choice():
             if choice2 == 3:
                 return input_contact_menu_choice()
             else:
-                print('\nНеверный пункт меню !!!')
-                # logg.error_enter()
-                return 0
+                return input_contact_menu_choice()
         elif choice1 == 2:
-            print('2. Найти номер по фамилии')
-            print('3. Найти номер по имени')
-            print('4. Поиск по номеру телефона')
+            print('1. Найти номер по фамилии')
+            print('2. Найти номер по имени')
+            print('3. Поиск по номеру телефона')
+            print('0. Вернуться в главное меню')
             try:
                 choice3 = int(input('Выберите пункт меню: '))
             except ValueError:
@@ -57,11 +57,9 @@ def input_contact_menu_choice():
             if choice3 == 2:
                 return 2
             if choice3 == 3:
-                return input_contact_menu_choice()
+                return 3
             else:
-                print('\nНеверный пункт меню !!!')
-                # logg.error_enter()
-                return 0
+                return input_contact_menu_choice()
         elif choice1 == 3:
             return 3
         elif choice1 == 4:
@@ -71,8 +69,6 @@ def input_contact_menu_choice():
         elif choice1 == 0:
             return exit()
         else:
-            print('\nНеверный пункт меню !!!')
-            # logg.error_enter()
             return input_contact_menu_choice()
 
 
