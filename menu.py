@@ -1,6 +1,5 @@
 from look import look
 from print import print_csv, print_txt, print_all
-from os import system
 
 
 def input_contact_menu_choice():
