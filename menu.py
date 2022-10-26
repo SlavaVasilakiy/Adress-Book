@@ -1,4 +1,4 @@
-from look import look, delete_contact
+from look import look, delete_contact, change_contact
 from print_info import print_csv, print_txt, print_all
 from exceptions import user_choice
 from file_writing import writing_txt, writing_scv
@@ -47,7 +47,8 @@ def input_contact_menu_choice():
             to_add = adding()
             log.add(to_add)
         elif choice_menu == 4:
-            return 4
+            change_key = change_contact()
+            log.change(change_key)
         elif choice_menu == 5:
             del_key = delete_contact()
             log.del_item(del_key)
@@ -67,4 +68,4 @@ def input_contact_menu_choice():
             return input_contact_menu_choice()
 
 
-print(input_contact_menu_choice())
+input_contact_menu_choice()

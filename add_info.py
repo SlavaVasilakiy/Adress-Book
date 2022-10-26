@@ -9,7 +9,7 @@ def adding():
         last_key = my_f.readline().split()
         new_key = int(last_key[-1])
     with open('Phonebook.csv', "a", encoding='utf-8') as base:
-        base.write('{},{},{},{},{}\n\n'.format(new_key + 1, to_add[0], to_add[1], to_add[2], to_add[3]))
+        base.write('\n{},{},{},{},{}'.format(new_key + 1, to_add[0], to_add[1], to_add[2], to_add[3]))
     with open('Phonebook.txt', "a", encoding='utf-8') as b_t:
         b_t.write(f'№ {new_key + 1}\nФамилия: {to_add[0]}\nИмя: {to_add[1]}\nНомер телефона: {to_add[2]}\nОписание: {to_add[3]}\n\n\n')
     with open('last_key.txt', "w", encoding='utf-8') as my_f:
